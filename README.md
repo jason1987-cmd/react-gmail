@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Mini Gmail React
 
 A React + Vite + Netlify Functions + Supabase + Gmail SMTP/IMAP demo.
@@ -22,4 +23,6 @@ A React + Vite + Netlify Functions + Supabase + Gmail SMTP/IMAP demo.
 - Use Gmail App Password, not your normal Gmail password
 - Do not put secret keys in React files
 # react-gmail
+=======
+>>>>>>> 59b7ff8b3bd7c39e47643fa0f7ee7ecb1c09c65e
 # react-gmail
