@@ -1,0 +1,185 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f7fb;
+  color: #1f2937;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background: #111827;
+  color: #fff;
+  padding: 24px 18px;
+}
+
+.sidebar h1 {
+  margin: 0 0 8px;
+  font-size: 26px;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  grid-template-areas:
+    "auth auth"
+    "inbox reader"
+    "compose reader";
+  gap: 16px;
+  padding: 16px;
+}
+
+.auth-panel { grid-area: auth; }
+.inbox-panel { grid-area: inbox; min-height: 420px; }
+.reader-panel { grid-area: reader; min-height: 420px; }
+.compose-panel { grid-area: compose; }
+
+.panel {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+  padding: 18px;
+}
+
+.panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.stack {
+  display: grid;
+  gap: 12px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+}
+
+button {
+  padding: 12px 14px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+button.secondary { background: #374151; }
+button.danger { background: #dc2626; }
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.tab {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.tab.active {
+  background: #2563eb;
+  color: #fff;
+}
+
+.nav-group {
+  display: grid;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.mail-list {
+  margin-top: 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.mail-item {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 12px;
+  cursor: pointer;
+  background: #fafafa;
+}
+
+.mail-item:hover {
+  background: #f3f4f6;
+}
+
+.mail-item.active {
+  background: #e8f0fe;
+  border-color: #93c5fd;
+}
+
+.mail-subject {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.mail-meta,
+.muted,
+.status {
+  color: #6b7280;
+}
+
+.badge {
+  font-size: 12px;
+  padding: 6px 10px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  border-radius: 999px;
+}
+
+.pager {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  background: #f8fafc;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+@media (max-width: 1000px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .main-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "auth"
+      "compose"
+      "inbox"
+      "reader";
+  }
+}

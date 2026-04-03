@@ -1,0 +1,24 @@
+{
+  "name": "mini-gmail-react",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "netlify:dev": "netlify dev"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.8",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "imap-simple": "^5.1.0",
+    "mailparser": "^3.7.2",
+    "nodemailer": "^6.9.16"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^5.4.10"
+  }
+}
