@@ -26,3 +26,4 @@ A React + Vite + Netlify Functions + Supabase + Gmail SMTP/IMAP demo.
 =======
 >>>>>>> 59b7ff8b3bd7c39e47643fa0f7ee7ecb1c09c65e
 # react-gmail
+# mini-gmail-react
